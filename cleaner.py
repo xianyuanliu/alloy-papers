@@ -11,6 +11,7 @@ from tqdm import tqdm
 import os
 import re
 
+
 def remove_abstract_introduction(text):
     # Define patterns to match Abstract, Introduction, and Experiment sections
     abstract_pattern = re.compile(r"(?i)^#+\s*([ivxlcdm\d]*\s*)?a\s*bstract\s*(.*?)", re.DOTALL | re.MULTILINE)
@@ -64,12 +65,7 @@ def remove_abstract_introduction(text):
 
 def remove_references_acknowledgement(text):
     # Remove 'References' section (any heading level, with optional numbering)
-    text = re.sub(
-        r"^#{1,6}\s*\d*\s*References\b.*?(?=^#{1,6}\s|\Z)",
-        "",
-        text,
-        flags=re.DOTALL | re.IGNORECASE | re.MULTILINE
-    )
+    text = re.sub(r"^#{1,6}\s*\d*\s*References\b.*?(?=^#{1,6}\s|\Z)", "", text, flags=re.DOTALL | re.IGNORECASE | re.MULTILINE)
 
     sections_to_remove = [
         "Acknowledgements",
@@ -84,19 +80,15 @@ def remove_references_acknowledgement(text):
     ]
 
     # Match any heading level (# to ######), optional numbering, section name, and its content
-    pattern = (
-            r"^#{1,6}\s*\d*\s*(?:" +
-            "|".join(re.escape(s) for s in sections_to_remove) +
-            r")\b.*?(?=^#{1,6}\s|\Z)"
-    )
+    pattern = r"^#{1,6}\s*\d*\s*(?:" + "|".join(re.escape(s) for s in sections_to_remove) + r")\b.*?(?=^#{1,6}\s|\Z)"
 
     text = re.sub(pattern, "", text, flags=re.DOTALL | re.MULTILINE | re.IGNORECASE)
     return text
 
 
 def remove_repetitions(text, threshold=3):
-    pattern = re.compile(r'\b(.+?)\b(?:\s+\1\b){{{},}}'.format(threshold - 1))
-    cleaned = pattern.sub(r'\1', text)
+    pattern = re.compile(r"\b(.+?)\b(?:\s+\1\b){{{},}}".format(threshold - 1))
+    cleaned = pattern.sub(r"\1", text)
     return cleaned
 
 
@@ -116,5 +108,6 @@ def process_files(input_folder, output_folder):
             output_file_name = f"{file_name}"
             with open(os.path.join(output_folder, output_file_name), "w", encoding="utf-8") as output_file:
                 output_file.write(cleaned_text)
+
 
 process_files(input_folder, output_folder)

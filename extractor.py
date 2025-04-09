@@ -3,11 +3,11 @@
 # @markdown It identifies alloy compositions, and phase information based on structured prompts,
 # @markdown then cleans and saves the output as JSON in the specified output folder.
 
-llm_model = "meta-llama/Llama-3.2-3B-Instruct" # @param {type:"string"}
-input_folder = "papers/cleaned" # @param {type:"string"}
-output_dir = "papers/output" # @param {type:"string"}
-max_len = "120000" # @param {type:"string"}
-quantize = "" # @param {type:"string"}
+llm_model = "meta-llama/Llama-3.2-3B-Instruct"  # @param {type:"string"}
+input_folder = "papers/cleaned"  # @param {type:"string"}
+output_dir = "papers/output"  # @param {type:"string"}
+max_len = "120000"  # @param {type:"string"}
+quantize = ""  # @param {type:"string"}
 
 # --- Script starts here ---
 import json
@@ -57,6 +57,7 @@ def clean(text):
         return cleaned
     except json.JSONDecodeError:
         return "[]"
+
 
 def prompt_1(text):
     return f"""You are a helpful assistant. Your task is to extract alloy and its corresponding phase information from the text.
@@ -140,6 +141,7 @@ def prompt_1(text):
 # —————
 # """
 
+
 def main(model, folder, output_dir, max_len, quantize):
     generator = pipeline(
         "text-generation",
@@ -195,14 +197,10 @@ def main(model, folder, output_dir, max_len, quantize):
         for o in outputs:
             merged.extend(json.loads(o))
         # unique = [dict(t) for t in {tuple(sorted(d.items())) for d in merged}]
-        unique = [
-            dict(t) for t in {
-                tuple(sorted((k, tuple(v) if isinstance(v, list) else v) for k, v in d.items()))
-                for d in merged
-            }
-        ]
+        unique = [dict(t) for t in {tuple(sorted((k, tuple(v) if isinstance(v, list) else v) for k, v in d.items())) for d in merged}]
         with open(os.path.join(results, mmd), "w") as f:
             f.write(json.dumps(unique, indent=2))
+
 
 max_len = int(max_len)
 print("Files to process:", os.listdir(input_folder))
