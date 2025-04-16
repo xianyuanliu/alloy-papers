@@ -42,17 +42,16 @@ You will also need to [Sign up for Hugging Face](https://huggingface.co/join) fo
 
 Finally you will need to request access to the LLaMa model that we are going to use in this demonstration [LLaMa-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
 
-
-
 ### Download Notebook and open in Google Colab
-- Download the python jupyter notebook available in this GitHub repository
-- [NLP-for-materials.pynb](https://raw.githubusercontent.com/xianyuanliu/alloy-property-extraction-demo/refs/heads/JB_Update/NLP-for-Materials.ipynb)
+- Download the [NLP-for-materials.pynb](https://raw.githubusercontent.com/xianyuanliu/alloy-property-extraction-demo/refs/heads/JB_Update/NLP-for-Materials.ipynb) notebook available in this GitHub repository
 - Open the notebook in [Google Colab](https://colab.research.google.com/)
-  
 
-## The Following Steps Follow the Outline in the Notebook
 
-  
+
+## The Following Steps are Outlined within the Notebook
+
+
+
 ### 1. Download Papers
 - A dummy paper and real academic paper by [QiYung Li _et al._](https://doi.org/10.3390/ma12030533) are available in PDF form in a Google Drive: [Papers]( https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902)
 
