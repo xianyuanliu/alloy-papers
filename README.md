@@ -38,9 +38,9 @@ All steps are run on **Google Colab**. You do not need to install anything local
 Make sure to access the GPU. <br />
 **Runtime > Change runTime type > T4 GPU** 
 
-You will also need to [Sign up for Hugging Face](https://huggingface.co/join) for free to obtain a token to access the LLaMa models via the Transformers Library.
+[Sign up for Hugging Face](https://huggingface.co/join) for free to obtain a token to access the LLaMa models via the Transformers Library.
 
-Finally you will need to request access to the LLaMa model that we are going to use in this demonstration [LLaMa-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
+Request access to the LLaMa model that we are going to use in this demonstration [LLaMa-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)
 
 ### Download Notebook and open in Google Colab
 - Download the [NLP-for-materials.pynb](https://raw.githubusercontent.com/xianyuanliu/alloy-property-extraction-demo/refs/heads/JB_Update/NLP-for-Materials.ipynb) notebook available in this GitHub repository
