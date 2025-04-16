@@ -31,20 +31,22 @@ The training is designed for **both coders and non-coders**, with **interactive 
 
 
 
-## Setup & Usage Guide
+## Setup Guide
 
 All steps are run on **Google Colab**. You do not need to install anything locally. <br />
 Make sure to access the GPU. <br />
 **Runtime > Change RunTime type > T4 GPU** 
 
-You will also need to [Sign up for Hugging Face](https://huggingface.co/join) for free to use Hugging Face via the Transformers Library.
+[Sign up for Hugging Face](https://huggingface.co/join) for free to obtain a token to access the LLaMa models via the Transformers Library.
 
-You will need to agree to the license terms and conditions to use the LLaMA models. You can find the terms for the [**LLaMA-3.2-3B** model](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) here.
+Request access to the LLaMa model that we are going to use in this demonstration [LLaMa-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct).
 
----
+## Usage Guide
 
 ### 1. Download Papers
-- Dummy PDF papers or open-access academic PDF papers are preloaded from Google Drive or this repository.
+
+- A dummy paper and real academic paper by [QiYung Li _et al._](https://doi.org/10.3390/ma12030533) are available in PDF format via this [Google Drive link]( https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902)
+- These papers will be preloaded in the Colab, so there is no need to download them manually.
 
 ---
 
