@@ -30,7 +30,7 @@ The training is designed for **both coders and non-coders**, with **interactive 
 
 
 
-## Setup & Usage Guide
+## Setup Guide
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
 
@@ -48,7 +48,7 @@ Finally you will need to request access to the LLaMa model that we are going to 
 
 
 
-## The Following Steps are Outlined within the Notebook
+## Usage Guide
 
 
 
