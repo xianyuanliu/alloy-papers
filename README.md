@@ -45,9 +45,8 @@ Request access to the LLaMa model that we are going to use in this demonstration
 
 ### 1. Download Papers
 
-- A dummy paper and real academic paper by [QiYung Li _et al._](https://doi.org/10.3390/ma12030533) are available in PDF format via this [Google Drive link]( https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902)
-- These papers will be preloaded in the Colab, so there is no need to download them manually.
-
+- A dummy paper and real academic paper by [QiYung Li _et al._](https://doi.org/10.3390/ma12030533) are available in PDF format via this [Google Drive link](https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902).
+The papers will be downloaded when the code is run in Colab, so manual download is not necessary.
 ---
 
 ### 2. Convert PDF to Raw Text
@@ -95,7 +94,7 @@ Request access to the LLaMa model that we are going to use in this demonstration
 ### 8. Utilities _(Optional)_
 If you run into memory or performance issues:
 - **Free GPU Memory**: Clears unused variables and CUDA memory caches.
-- **Clear Cache**: Choose to clean Hugging Face and/or PyTorch caches. Otherwise, they will be stored in your account storage.
+- **Clear Cache**: Choose to clean Hugging Face and/or PyTorch caches. Otherwise, the caches will be stored in your account storage.
 
 ---
 
@@ -111,7 +110,7 @@ The following tools are used in the construction of this work:
   > eprint={2308.13418},
   > archivePrefix={arXiv},
   > primaryClass={cs.LG}
-}
+  > }
 
 - **LLaMA**:
   > @misc{touvron2023llama,  
