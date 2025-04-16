@@ -45,7 +45,7 @@ Finally you will need to request access to the LLaMa model that we are going to 
 ---
 
 ### 1. Download Papers
-- A dummy and real academic paper are available in PDF form in a Google Drive: [Papers]( https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902)
+- A dummy paper and real academic paper by [QiYung Li _et al._](https://doi.org/10.3390/ma12030533) are available in PDF form in a Google Drive: [Papers]( https://drive.google.com/uc?id=1DvejY9En4cZlMlCs3Wgwspmjwmd8a902)
 
 ---
 
