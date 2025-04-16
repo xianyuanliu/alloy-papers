@@ -1,6 +1,6 @@
 #  🧪 Extracting Alloy Data from Scientific PDFs – TOTEMIC Training School - 2025
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bezzer365/TOTEMIC-2025/blob/main/NLP_for_Materials.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xianyuanliu/alloy-property-extraction-demo/blob/main/NLP_for_Materials.ipynb)
 
 Welcome to the GitHub repository for the session at the **TOTEMIC Training School 2025: "Tools for Energy Materials Modelling Acceleration"** on Extracting Alloy Data from PDF Files. This repository contains all the code, tools, and examples you’ll need to automatically extract alloy composition and phase information from scientific papers using **Nougat** and **LLMs (LLaMA via Hugging Face Transformers)**. All steps are designed to be run on **Google Colab**, making use of its free GPU resources.
 
@@ -13,8 +13,8 @@ Welcome to the GitHub repository for the session at the **TOTEMIC Training Schoo
 - Joshua Berry <sup>3</sup>
 - Katerina Christofidou <sup>3</sup>
 
-1. _Computer Science Department, University of Sheffield, UK_
-2. _AI Research Engineering Team, Centre for Machine Intelligence, University of Sheffield, UK_
+1. _School of Computer Science, University of Sheffield, UK_
+2. _AI Research Engineering, Centre for Machine Intelligence, University of Sheffield, UK_
 3. _Material Science and Engineering Department, University of Sheffield, UK_
 
 
@@ -24,7 +24,7 @@ Welcome to the GitHub repository for the session at the **TOTEMIC Training Schoo
 The goal of this training session is to **demonstrate and walk through** an end-to-end workflow for:
 - Converting academic papers in PDF format into markdown text
 - Cleaning and preparing that text
-- Extracting alloy and phase information using an LLM
+- Extracting alloy and phase information using a large language model (LLM)
 - Reviewing and saving the extracted data
 
 The training is designed for **both coders and non-coders**, with **interactive input boxes** provided to guide users through each step without needing to write code.
@@ -37,25 +37,27 @@ All steps are run on **Google Colab**. You do not need to install anything local
 Make sure to access the GPU. <br />
 **Runtime > Change runTime type > T4 GPU** 
 
-You will also need to [Sign up for Hugging Face](https://huggingface.co/join) for free to obtain a token to access the LLaMa models via the Transformers Library.
+You will also need to [Sign up for Hugging Face](https://huggingface.co/join) for free to use Hugging Face via the Transformers Library.
+
+You will need to agree to the license terms and conditions to use the LLaMA models. You can find the terms for the [**LLaMA-3.2-3B** model](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct) here.
 
 ---
 
 ### 1. Download Papers
-- A set of open access academic PDF papers is preloaded in this repository.
+- Dummy PDF papers or open-access academic PDF papers are preloaded from Google Drive or this repository.
 
 ---
 
-### 2. Convert PDF to Markdown Text
+### 2. Convert PDF to Raw Text
 - **Install Nougat** from GitHub (an open-source OCR-based tool for PDF parsing).
 - Run Nougat to convert PDFs to `.mmd` markdown files.
-- **Preview extracted text** using `IPython.display`.
-- _Optional_: Open the `.mmd` markdown file in **Overleaf** for clearer formatting.
+- **Preview extracted text** using `IPython.display` and compare it with the original PDF.
+- _Optional_: Open the `.mmd` markdown file to find which format the PDF is converted to.
 
 ---
 
 ### 3. Clean Raw Text
-- **Remove unwanted sections** (e.g., acknowledgments, references).
+- **Remove unwanted sections** (e.g., acknowledgements, references).
 - _Optional_: Remove abstract and introduction.
 - Re-preview the `.mmd` file as above to confirm it's clean.
 
@@ -67,8 +69,8 @@ You will also need to [Sign up for Hugging Face](https://huggingface.co/join) fo
 
 ---
 
-### 5. Install Transformers v4.49.0
-- This specific version of Hugging Face Transformers is needed for compatibility.
+### 5. Upgrade to Transformers v4.49.0
+- This specific version of Hugging Face Transformers is needed for compatibility with LLaMA models.
 - Runtime will **restart automatically** after installation.
 
 ---
@@ -78,7 +80,7 @@ You will also need to [Sign up for Hugging Face](https://huggingface.co/join) fo
 - The model:
   - Identifies alloy compositions
   - Extracts phase-related information
-  - Cleans the output and saves it as `.json` files in an output folder
+  - Cleans the output and saves it in JSON format in a `.json` file in an output folder
 
 ---
 
@@ -90,8 +92,8 @@ You will also need to [Sign up for Hugging Face](https://huggingface.co/join) fo
 
 ### 8. Utilities _(Optional)_
 If you run into memory or performance issues:
-- **Free GPU Memory**: Clears unused variables and CUDA memory cache.
-- **Clear Cache**: Choose to clean Hugging Face and/or PyTorch cache.
+- **Free GPU Memory**: Clears unused variables and CUDA memory caches.
+- **Clear Cache**: Choose to clean Hugging Face and/or PyTorch caches. Otherwise, they will be stored in your account storage.
 
 ---
 
