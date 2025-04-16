@@ -35,7 +35,7 @@ The training is designed for **both coders and non-coders**, with **interactive 
 
 All steps are run on **Google Colab**. You do not need to install anything locally. <br />
 Make sure to access the GPU. <br />
-**Runtime > Change runTime type > T4 GPU** 
+**Runtime > Change RunTime type > T4 GPU** 
 
 You will also need to [Sign up for Hugging Face](https://huggingface.co/join) for free to use Hugging Face via the Transformers Library.
 
