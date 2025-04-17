@@ -1,7 +1,5 @@
 #  🧪 Extracting Alloy Data from Scientific PDFs – TOTEMIC Training School - 2025
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xianyuanliu/alloy-property-extraction-demo/blob/main/NLP_for_Materials.ipynb)
-
 Welcome to the GitHub repository for the session at the **TOTEMIC Training School 2025: "Tools for Energy Materials Modelling Acceleration"** on Extracting Alloy Data from PDF Files. This repository contains all the code, tools, and examples you’ll need to automatically extract alloy composition and phase information from scientific papers using **Nougat** and **LLMs (LLaMA via Hugging Face Transformers)**. All steps are designed to be run on **Google Colab**, making use of its free GPU resources.
 
 
@@ -33,6 +31,8 @@ The training is designed for **both coders and non-coders**, with **interactive 
 
 ## Setup Guide
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xianyuanliu/alloy-property-extraction-demo/blob/main/NLP_for_Materials.ipynb)
+
 All steps are run on **Google Colab**. You do not need to install anything locally. <br />
 Make sure to access the GPU. <br />
 **Runtime > Change RunTime type > T4 GPU** 
@@ -40,6 +40,7 @@ Make sure to access the GPU. <br />
 [Sign up for Hugging Face](https://huggingface.co/join) for free to obtain a token to access the LLaMa models via the Transformers Library.
 
 Request access to the LLaMa model that we are going to use in this demonstration [LLaMa-3.2-3B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct).
+
 
 ## Usage Guide
 
